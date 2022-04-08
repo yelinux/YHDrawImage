@@ -1,0 +1,6 @@
+framework module YHDrawImage {
+  umbrella header "YHDrawImage-umbrella.h"
+
+  export *
+  module * { export * }
+}

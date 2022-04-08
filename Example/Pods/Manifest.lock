@@ -1,0 +1,16 @@
+PODS:
+  - YHDrawImage (0.1.0)
+
+DEPENDENCIES:
+  - YHDrawImage (from `../`)
+
+EXTERNAL SOURCES:
+  YHDrawImage:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  YHDrawImage: 8f38fcb3c927976d530f7e299098fa379b8a3f59
+
+PODFILE CHECKSUM: 324badf4406674f2ffbd41fe8d62e4af44c524d3
+
+COCOAPODS: 1.11.2

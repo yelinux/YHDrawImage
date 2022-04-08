@@ -8,6 +8,8 @@
 
 #import "YHAppDelegate.h"
 
+//org.cocoapods.demo.YHDrawImage-Example
+
 @implementation YHAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
