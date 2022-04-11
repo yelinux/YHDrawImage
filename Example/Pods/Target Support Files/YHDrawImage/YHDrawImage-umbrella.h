@@ -10,6 +10,9 @@
 #endif
 #endif
 
+#import "NSMutableAttributedString+YHDrawImage.h"
+#import "YHDrawImage.h"
+#import "YHDrawModel.h"
 
 FOUNDATION_EXPORT double YHDrawImageVersionNumber;
 FOUNDATION_EXPORT const unsigned char YHDrawImageVersionString[];

@@ -22,8 +22,6 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		7D323CFEFA2B3DF7C1838256 /* Pods_YHDrawImage_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2DD5DBE30CAF43F8EF81348 /* Pods_YHDrawImage_Tests.framework */; };
-		818C653A27FFD45000442A5C /* YHDrawModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 818C653927FFD45000442A5C /* YHDrawModel.m */; };
-		818C653D28002F3400442A5C /* NSMutableAttributedString+YHDrawImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 818C653C28002F3400442A5C /* NSMutableAttributedString+YHDrawImage.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		AC45D97936A081D3D461D5C6 /* Pods_YHDrawImage_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 510672554414A9222EF3A279 /* Pods_YHDrawImage_Example.framework */; };
 /* End PBXBuildFile section */
@@ -40,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		2319C392508A0020189371D8 /* Pods-YHDrawImage_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHDrawImage_Tests.release.xcconfig"; path = "Target Support Files/Pods-YHDrawImage_Tests/Pods-YHDrawImage_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		3570BF86C6CA461F98B36431 /* YHDrawImage.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YHDrawImage.podspec; path = ../YHDrawImage.podspec; sourceTree = "<group>"; };
+		3570BF86C6CA461F98B36431 /* YHDrawImage.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YHDrawImage.podspec; path = ../YHDrawImage.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		510672554414A9222EF3A279 /* Pods_YHDrawImage_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YHDrawImage_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* YHDrawImage_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHDrawImage_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,11 +61,6 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B16CDF036417AB6942A164F /* Pods-YHDrawImage_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHDrawImage_Example.release.xcconfig"; path = "Target Support Files/Pods-YHDrawImage_Example/Pods-YHDrawImage_Example.release.xcconfig"; sourceTree = "<group>"; };
-		818C653827FFD45000442A5C /* YHDrawModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = YHDrawModel.h; path = Classes/YHDrawModel.h; sourceTree = "<group>"; };
-		818C653927FFD45000442A5C /* YHDrawModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = YHDrawModel.m; path = Classes/YHDrawModel.m; sourceTree = "<group>"; };
-		818C653B28002F3400442A5C /* NSMutableAttributedString+YHDrawImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSMutableAttributedString+YHDrawImage.h"; path = "Classes/NSMutableAttributedString+YHDrawImage.h"; sourceTree = "<group>"; };
-		818C653C28002F3400442A5C /* NSMutableAttributedString+YHDrawImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSMutableAttributedString+YHDrawImage.m"; path = "Classes/NSMutableAttributedString+YHDrawImage.m"; sourceTree = "<group>"; };
-		818C653E2800302300442A5C /* YHDrawImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = YHDrawImage.h; path = Classes/YHDrawImage.h; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FDF155865FA9B3D139B9D5A /* Pods-YHDrawImage_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHDrawImage_Tests.debug.xcconfig"; path = "Target Support Files/Pods-YHDrawImage_Tests/Pods-YHDrawImage_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A05CE3B9DD2FDC803F0831A2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -150,7 +143,6 @@
 		6003F593195388D20070C39A /* Example for YHDrawImage */ = {
 			isa = PBXGroup;
 			children = (
-				818C653727FFD43A00442A5C /* Classes */,
 				6003F59C195388D20070C39A /* YHAppDelegate.h */,
 				6003F59D195388D20070C39A /* YHAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -202,18 +194,6 @@
 				C192B778C64353EA37D7D765 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
-			sourceTree = "<group>";
-		};
-		818C653727FFD43A00442A5C /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				818C653E2800302300442A5C /* YHDrawImage.h */,
-				818C653827FFD45000442A5C /* YHDrawModel.h */,
-				818C653927FFD45000442A5C /* YHDrawModel.m */,
-				818C653B28002F3400442A5C /* NSMutableAttributedString+YHDrawImage.h */,
-				818C653C28002F3400442A5C /* NSMutableAttributedString+YHDrawImage.m */,
-			);
-			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,8 +367,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				818C653A27FFD45000442A5C /* YHDrawModel.m in Sources */,
-				818C653D28002F3400442A5C /* NSMutableAttributedString+YHDrawImage.m in Sources */,
 				6003F59E195388D20070C39A /* YHAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* YHViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,

@@ -21,15 +21,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    NSMutableAttributedString *attrMutStr = [[NSMutableAttributedString alloc] initWithString:@"3天前·XXX好极有限公司员工 " attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}];
+    NSMutableAttributedString *attrMutStr = [[NSMutableAttributedString alloc] initWithString:@"3天前·达文西XXX有限公司员工 " attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}];
     
     UIColor *color = [UIColor colorWithRed:20/255.0 green:122/255.0 blue:244/255.0 alpha:1];
     
     UIImage *img1 = YHDrawModel.new
-        .string(@"V", @{NSForegroundColorAttributeName:UIColor.whiteColor, NSFontAttributeName:[UIFont boldSystemFontOfSize:10]})
-        .fill(color)
-        .radius(2, UIRectCornerAllCorners)
-        .size(CGSizeMake(15, 15))
+        .string(@"V", @{NSForegroundColorAttributeName:UIColor.whiteColor, NSFontAttributeName:[UIFont boldSystemFontOfSize:10]})//文本+属性
+        .fill(color)//背景颜色
+        .radius(2, UIRectCornerAllCorners)//圆角
+        .size(CGSizeMake(15, 15))//固定宽高
         .draw;
     [attrMutStr yh_appendAttachmentImage:img1 offsetY:2];
     [attrMutStr appendAttributedString:[[NSAttributedString alloc] initWithString:@" "]];
@@ -37,25 +37,25 @@
     NSAttributedString *attr2 = [[NSAttributedString alloc] initWithString:@"ID" attributes:@{NSForegroundColorAttributeName:color, NSFontAttributeName:[UIFont systemFontOfSize:10]}];
     UIImage *img2 = YHDrawModel.new
         .attributes(attr2)
-        .fill(UIColor.whiteColor)
-        .padding(0.5, 4, 0.5, 4)
-        .stroke(color, 1)
-        .radius(2, UIRectCornerAllCorners)
-        .draw;
+        .fill(UIColor.whiteColor)//背景颜色
+        .padding(0.5, 4, 0.5, 4)//内边距
+        .stroke(color, 1)//边框颜色，边框宽度
+        .radius(2, UIRectCornerAllCorners)//圆角
+        .draw;//绘制
     [attrMutStr yh_appendAttachmentImage:img2 offsetY:2];
     
     [attrMutStr appendAttributedString:[[NSAttributedString alloc] initWithString:@"\n\n"]];
     
     NSAttributedString *attr = [[NSAttributedString alloc] initWithString:@"这是固定高富文本图片，固定宽高如下：" attributes:@{NSForegroundColorAttributeName:color, NSFontAttributeName:[UIFont systemFontOfSize:10]}];
     UIImage *img = YHDrawModel.new
-        .attributes(attr)
-        .fill(UIColor.whiteColor)
-        .stroke(color, 1)
-        .radius(2, UIRectCornerAllCorners)
-        .padding(0, 6, 0, 4)
-        .size(CGSizeMake(0, 15))
-        .margin(0, 1, 0, 1)
-        .draw;
+        .attributes(attr)//文本
+        .fill(UIColor.whiteColor)//背景颜色
+        .stroke(color, 1)//边框颜色，边框宽度
+        .radius(2, UIRectCornerAllCorners)//圆角
+        .padding(0, 6, 0, 4)//内边距
+        .size(CGSizeMake(0, 15))//固定宽高，0表示不固定，随内容自适应
+        .margin(0, 1, 0, 1)//外边距
+        .draw;//绘制
     [attrMutStr yh_appendAttachmentImage:img offsetY:2];
     
     for(int i = 0 ; i < 99 ; i++){
