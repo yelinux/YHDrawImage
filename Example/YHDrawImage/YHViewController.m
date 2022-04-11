@@ -103,7 +103,10 @@
             .attributes(attr)
             .fill(UIColor.whiteColor)
             .stroke(color, 1)
-            .radius(2, UIRectCornerAllCorners)
+            .radius(0, UIRectCornerTopLeft)
+            .radius(4, UIRectCornerTopRight)
+            .radius(6, UIRectCornerBottomLeft)
+            .radius(8, UIRectCornerBottomRight)
             .padding(4, 6, 4, 6)
             .margin(0, 1, 0, 1)
             .draw;

@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/YHDrawImage.svg?style=flat)](https://cocoapods.org/pods/YHDrawImage)
 
 ## Features
-![示例](./preview/IMG_1902.PNG)
+![示例](./preview/IMG_1906.jpg)
 
 ## Example
 

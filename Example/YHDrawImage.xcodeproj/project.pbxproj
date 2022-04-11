@@ -248,7 +248,7 @@
 				ORGANIZATIONNAME = "ye_linux@126.com";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = C77C4Z7YUK;
+						ProvisioningStyle = Automatic;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -497,13 +497,16 @@
 			baseConfigurationReference = F1412623D13B3F8E573A8AEE /* Pods-YHDrawImage_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = C77C4Z7YUK;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YHDrawImage/YHDrawImage-Prefix.pch";
 				INFOPLIST_FILE = "YHDrawImage/YHDrawImage-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.syc.saas.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.YHDrawImage-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -514,13 +517,16 @@
 			baseConfigurationReference = 7B16CDF036417AB6942A164F /* Pods-YHDrawImage_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = C77C4Z7YUK;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YHDrawImage/YHDrawImage-Prefix.pch";
 				INFOPLIST_FILE = "YHDrawImage/YHDrawImage-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.syc.saas.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.YHDrawImage-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
