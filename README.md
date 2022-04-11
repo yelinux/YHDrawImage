@@ -1,5 +1,7 @@
 # YHDrawImage
 
+轻量级，文本加自定义边框背景转换成图片，常用于富文本特殊字符加圆角边框背景
+
 [![CI Status](https://img.shields.io/travis/ye_linux@126.com/YHDrawImage.svg?style=flat)](https://travis-ci.org/ye_linux@126.com/YHDrawImage)
 [![Version](https://img.shields.io/cocoapods/v/YHDrawImage.svg?style=flat)](https://cocoapods.org/pods/YHDrawImage)
 [![License](https://img.shields.io/cocoapods/l/YHDrawImage.svg?style=flat)](https://cocoapods.org/pods/YHDrawImage)
