@@ -37,19 +37,17 @@
     NSAttributedString *attr2 = [[NSAttributedString alloc] initWithString:@"ID" attributes:@{NSForegroundColorAttributeName:color, NSFontAttributeName:[UIFont systemFontOfSize:10]}];
     UIImage *img2 = YHDrawModel.new
         .attributes(attr2)
-        .fill(UIColor.whiteColor)//背景颜色
         .padding(0.5, 4, 0.5, 4)//内边距
         .stroke(color, 1)//边框颜色，边框宽度
         .radius(2, UIRectCornerAllCorners)//圆角
         .draw;//绘制
-    [attrMutStr yh_appendAttachmentImage:img2 offsetY:2];
+    [attrMutStr yh_appendAttachmentImage:img2 offsetY:1.4];
     
     [attrMutStr appendAttributedString:[[NSAttributedString alloc] initWithString:@"\n\n"]];
     
     NSAttributedString *attr = [[NSAttributedString alloc] initWithString:@"这是固定高富文本图片，固定宽高如下：" attributes:@{NSForegroundColorAttributeName:color, NSFontAttributeName:[UIFont systemFontOfSize:10]}];
     UIImage *img = YHDrawModel.new
         .attributes(attr)//文本
-        .fill(UIColor.whiteColor)//背景颜色
         .stroke(color, 1)//边框颜色，边框宽度
         .radius(2, UIRectCornerAllCorners)//圆角
         .padding(0, 6, 0, 4)//内边距
@@ -75,8 +73,7 @@
     }
     
     UIImage *img3 = YHDrawModel.new
-        .fill(UIColor.whiteColor)
-        .radius(11.0/2, UIRectCornerAllCorners)
+        .radius(6.5, UIRectCornerAllCorners)
         .stroke(color, 2)
         .size(CGSizeMake(15, 15))
         .margin(0, 1, 0, 1)
@@ -88,7 +85,7 @@
         NSAttributedString *attr = [[NSAttributedString alloc] initWithString:@"这是固定宽富文本图片，高度自动调节" attributes:@{NSForegroundColorAttributeName:color, NSFontAttributeName:[UIFont systemFontOfSize:10]}];
         UIImage *img = YHDrawModel.new
             .attributes(attr)
-            .fill(UIColor.whiteColor)
+            .fill([UIColor colorWithWhite:0 alpha:0.1])
             .stroke(color, 1)
             .radius(2, UIRectCornerAllCorners)
             .size(CGSizeMake(60, 0))
@@ -101,7 +98,6 @@
         NSAttributedString *attr = [[NSAttributedString alloc] initWithString:@"这自适应宽富文本图片，\n宽高根据内部文本自动调节\n设置内边距(4,6,4,6)" attributes:@{NSForegroundColorAttributeName:color, NSFontAttributeName:[UIFont systemFontOfSize:10]}];
         UIImage *img = YHDrawModel.new
             .attributes(attr)
-            .fill(UIColor.whiteColor)
             .stroke(color, 1)
             .radius(0, UIRectCornerTopLeft)
             .radius(4, UIRectCornerTopRight)
@@ -130,7 +126,6 @@
         {
             UIImage *img = YHDrawModel.new
                 .attributes(attrSub)
-                .fill(UIColor.whiteColor)
                 .stroke(color, 1)
                 .radius(2, UIRectCornerAllCorners)
                 .padding(4, 6, 4, 6)

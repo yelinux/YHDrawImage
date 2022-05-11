@@ -106,14 +106,14 @@
         attrStr = [[NSAttributedString alloc] initWithString:self.str attributes:self.attrs];
     }
     
-    CGFloat maxStrWidth = self.imgSize.width - (self.insets.left + self.insets.right + self.lineWidth * 2);
-    CGFloat maxStrHeight = self.imgSize.height - (self.insets.top + self.insets.bottom + self.lineWidth * 2);
+    CGFloat maxStrWidth = self.imgSize.width - (self.insets.left + self.insets.right + self.lineWidth);
+    CGFloat maxStrHeight = self.imgSize.height - (self.insets.top + self.insets.bottom + self.lineWidth);
     CGSize strSize = [attrStr boundingRectWithSize:CGSizeMake(maxStrWidth > 0 ? maxStrWidth : CGFLOAT_MAX, maxStrHeight > 0 ? maxStrHeight : CGFLOAT_MAX)
                                             options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
                                             context:nil].size;
     CGSize drawSize = self.imgSize;
-    drawSize = CGSizeMake(drawSize.width > 0 ? drawSize.width : strSize.width + self.insets.left + self.insets.right + self.lineWidth * 2,
-                          drawSize.height > 0 ? drawSize.height : strSize.height + self.insets.top + self.insets.bottom + self.lineWidth * 2);
+    drawSize = CGSizeMake(drawSize.width > 0 ? drawSize.width : strSize.width + self.insets.left + self.insets.right + self.lineWidth,
+                          drawSize.height > 0 ? drawSize.height : strSize.height + self.insets.top + self.insets.bottom + self.lineWidth);
     drawSize = CGSizeMake(drawSize.width + self.margins.left + self.margins.right, drawSize.height + self.margins.top + self.margins.bottom);
 
     /* 1.设置当前上下文中绘制的区域 */
@@ -145,45 +145,34 @@
         CGContextClosePath(ctx);
         CGContextDrawPath(ctx, kCGPathFillStroke);
     };
-    
-    //先画边框
-    if (self.strokeColor && self.lineWidth > 0) {
-        CGFloat r = 0, g, b, a;
+    CGFloat r = 0, g, b, a;
+    if (self.strokeColor) {
         [self.strokeColor getRed:&r green:&g blue:&b alpha:&a];
-        CGContextSetRGBFillColor(ctx, r, g, b, a);//设置填充颜色
+        CGContextSetLineWidth(ctx, self.lineWidth);
+        CGContextSetRGBStrokeColor(ctx, r, g, b, a);
+    } else {
         CGContextSetLineWidth(ctx, 0);
-        //确定矩形的位置和大小
-        CGRect rrect = CGRectMake(self.margins.left,
-                                  self.margins.top,
-                                  drawSize.width - self.margins.left - self.margins.right,
-                                  drawSize.height - self.margins.top - self.margins.bottom);
-        
-        drawBlock(rrect,
-                  self.radiusTopLeft + self.lineWidth,
-                  self.radiusTopRight + self.lineWidth,
-                  self.radiusBottomLeft + self.lineWidth,
-                  self.radiusBottomRight + self.lineWidth);
+        CGContextSetRGBStrokeColor(ctx, 0, 0, 0, 0);
     }
-    //再填充
     if (self.fillColor) {
-        CGFloat r = 0, g, b, a;
         [self.fillColor getRed:&r green:&g blue:&b alpha:&a];
-        CGContextSetRGBFillColor(ctx, r, g, b, a);//设置填充颜色
-        CGContextSetLineWidth(ctx, 0);
-        CGRect rrect = CGRectMake(self.lineWidth + self.margins.left,
-                                  self.lineWidth + self.margins.top,
-                                  drawSize.width - self.lineWidth * 2 - self.margins.left - self.margins.right,
-                                  drawSize.height - self.lineWidth * 2 - self.margins.top - self.margins.bottom);
-        
-        drawBlock(rrect,
-                  self.radiusTopLeft,
-                  self.radiusTopRight,
-                  self.radiusBottomLeft,
-                  self.radiusBottomRight);
+        CGContextSetRGBFillColor(ctx, r, g, b, a);
+    } else {
+        CGContextSetRGBFillColor(ctx, 0, 0, 0, 0);
     }
+    CGRect rrect = CGRectMake(self.lineWidth / 2 + self.margins.left,
+                              self.lineWidth / 2 + self.margins.top,
+                              drawSize.width - self.lineWidth - self.margins.left - self.margins.right,
+                              drawSize.height - self.lineWidth - self.margins.top - self.margins.bottom);
     
-    [attrStr drawInRect:CGRectMake(self.imgSize.width > 0 ? drawSize.width / 2 - strSize.width / 2 : self.insets.left + self.lineWidth + self.margins.left,
-                                   self.imgSize.height > 0 ? drawSize.height / 2 - strSize.height / 2 : self.insets.top + self.lineWidth + self.margins.top,
+    drawBlock(rrect,
+              self.radiusTopLeft,
+              self.radiusTopRight,
+              self.radiusBottomLeft,
+              self.radiusBottomRight);
+    
+    [attrStr drawInRect:CGRectMake(self.imgSize.width > 0 ? drawSize.width / 2 - strSize.width / 2 : self.insets.left + self.lineWidth / 2 + self.margins.left,
+                                   self.imgSize.height > 0 ? drawSize.height / 2 - strSize.height / 2 : self.insets.top + self.lineWidth / 2 + self.margins.top,
                                    strSize.width,
                                    strSize.height)];
     
